@@ -3,3 +3,27 @@
 </h1>
 <br/>
 <app-task-list></app-task-list>
+<br/>
+{{ user | json }}
+<br/>
+{{ upperText | uppercase }}
+<br/>
+{{ lowerText | lowercase }}
+<br/>
+{{ percent | percent }}
+<br/>
+{{ date | date: 'yyyy/MM/dd'}}
+<br/>
+{{ money | currency }}
+<br/>
+<div *ngIf="isAdmin">
+  Admnistrador 2
+</div>
+<br/>
+<div [ngSwitch]="profile">
+  <div *ngSwitchCase="1">You can read & write</div>
+  <div *ngSwitchCase="2">You can read</div>
+  <div *ngSwitchCase="3">You can write</div>
+  <div *ngSwitchDefault>go back please</div>
+
+</div>
